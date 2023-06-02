@@ -5,7 +5,7 @@ const userRoute = require('./user-routes');
 
 const router = express.Router();
 
-router.use('/signup',userRoute);
+router.use('/user',userRoute);
 
 router.get('/info', InfoController.info)
 
