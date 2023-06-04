@@ -6,5 +6,6 @@ const router = express.Router();
 
 router.post('/signup',AuthRequestMiddleware.validateAuthRequest, UserController.createUser);
 router.post('/signin',AuthRequestMiddleware.validateAuthRequest, UserController.signIn);
+router.post('/role',AuthRequestMiddleware.checkAuth,AuthRequestMiddleware.isAdmin,UserController.addRoleToUser);
 
 module.exports = router;
